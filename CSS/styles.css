@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: aliceblue;
+
+}
+
+h1 {
+
+    margin: auto;
+    background-color: brown;
+}
+
+main {
+    height: 100vh;
+}
+
+main h1 {
+    padding: 1em;
+}
+
+footer {
+    background-color: brown;
+    padding: 1em;
+}
