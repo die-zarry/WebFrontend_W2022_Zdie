@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <style>
+        body {
+            max-width: 500px;
+            margin: auto;
+            background-color: bisque;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-gap: 10px;
+        }
+
+        label {
+            grid-column: 1 / 2;
+        }
+
+        input,
+        button {
+            grid-column: 2 / 3;
+            background-color: chartreuse;
+
+        }
+
+        .onebar {
+            width: 1000px;
+            border: cyan, 2;
+        }
+
+        h1 {
+
+            margin: auto;
+            background-color: brown;
+            text-align: center;
+        }
+
+        footer {
+            background-color: brown;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Web Frontent Development, 330 PortFolio</h1>
+    <h4>Notes</h4>
+    <h4>form control sturcture</h4>
+    <p> We have seen the form elment and the different control structure
+        and form strucres such imput fields, button, select, textarea. The input elements have some common attributes
+        as to: place holder, maxlength, and autofocus. The default type of input is </p>
+    but it can be password, checkbox, radio, hidden, files, button or email. we can also specify a defaul value until
+    the user
+    enter another one.
+    <h5>client side validation</h5>
+    <p> we seen how to implement client side validation though it can be bypass easlily.</p>
+    <div class="container">
+        <div>
+            <h4>Checkout</h4>
+        </div>
+        <form name="payment" action="processPayment.php" method="post">
+            <label for='LastName' class='LastName'>LastName: </label>
+            <input type='text' id='lastName' name='LastName' autofocus placeholder=' LastName' maxlength=32 required>
+            <label for='firstName' class='firstName'>First Name:</label>
+            <input type='text' name='firstName' id='firstName' autofocus placeholder="First name"></label>
+            <label for='Password'>Password:</label>
+            <input type='password' name='password' id='password' autofocus></label>
+            <label for='Email' class='email'>Email:</label>
+            <input type='email' name='email' id='email' placeholder="Email@gmail.com"></label>
+            <label for='age' class='age'>Age: </label>
+            <input type='number' id='age' name='age' min=0 step=1></label>
+            <label for='toyota' class='toyata'>Toyota: </label>
+            <input type='radio' name='category' value='Toyota' id='toyota'>
+            <label for='porshe' class='porshe'>Porshe: </label>
+            <input type='radio' name='category' value='Porshe' id='porshe'>
+            <label for='ford' class="ford">Ford: </label>
+            <input type='radio' name='category' value='Ford' id='ford'>
+            <label for='nissan' class='nissan'>Nissan </label>
+            <input type='radio' name='category' value='Nissan' id='nissan'>
+            <label for='acura' class="acura">Acura: </label>
+            <input type='radio' name='category' value='Acura' id='acura'>
+            <label for='bmw' class="bmw">BMW: </label>
+            <input type='radio' name='category' value='BMW' id='bmw'>
+            <label for='card' class="card">Method of payments: </label>
+            <select name='card' id='card'>
+                <option value='' selected>Choose a credit card</option>
+                <option value='Visa'>Visa</option>
+                <option value='Mastercard'>Mastercard </option>
+                <option value='American express'>American Express</option>
+                <option value='Paypal'>Paypal</option>
+                <option value='Other'>Other</option>
+            </select>
+            <label for='origin' class="origin">Comments: </label>
+            <textarea id='origin' name='origin' rows='5' cols='20'></textarea>
+            <button type="submit" name='button' value='click' onclick="processPayment(this.form)"
+                id="submit-button">Submit</button>
+        </form>
+        <hr class="onebar">
+        <div>
+            <form name="myform" method="post">
+                Enter something: <BR>
+                <input type="text" name="inputbox" value="">
+                <h2>
+                    <input type="button" name="buttonOne" Value="Read" onClick="readText(this.form)">
+                    <input type="button" name="buttonTwo" Value="Write" onClick="writeText(this.form)">
+            </form>
+        </div>
+        <script>
+            function processPayment(form) {
+                var charge = form.input.value;
+                alert(`payement is completed ${charge}`);
+            }
+        </script>
+</body>
+
+</html>
