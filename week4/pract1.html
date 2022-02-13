@@ -1,0 +1,54 @@
+<HTML>
+
+<head>
+    <TITLE> js practice</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+        function readText(form) {
+            testInput = form.inputbox.value;
+            alert(`Entered: ${testInput}`);
+        }
+
+        function writeText(form) {
+            form.inputbox.value = "Brother James is awesome!"
+        }
+    </SCRIPT>
+
+    <style>
+        body {
+            max-width: 200px;
+            margin: auto 0;
+            background-color: coral;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-gap: 10px;
+        }
+
+        label {
+            grid-column: 1 / 2;
+        }
+
+        input,
+        button {
+            grid-column: 2 / 2;
+            background-color: rgb(158, 55, 72);
+            width: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <form name="myform" method="post">
+        Enter something: <BR>
+        <input type="text" name="inputbox" value="">
+        <h2>
+            <input type="button" name="buttonOne" Value="Read" onClick="readText(this.form)">
+            <input type="button" name="buttonTwo" Value="Write" onClick="writeText(this.form)">
+    </form>
+</body>
+
+</HTML>

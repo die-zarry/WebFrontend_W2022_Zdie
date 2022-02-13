@@ -30,43 +30,13 @@
             background-color: chartreuse;
 
         }
-
-        .onebar {
-            width: 1000px;
-            border: cyan, 2;
-        }
-
-        h1 {
-
-            margin: auto;
-            background-color: brown;
-            text-align: center;
-        }
-
-        footer {
-            background-color: brown;
-            padding: 1em;
-        }
     </style>
 </head>
 
 <body>
-    <h1>Web Frontent Development, 330 PortFolio</h1>
-    <h4>Notes</h4>
-    <h4>form control sturcture</h4>
-    <p> We have seen the form elment and the different control structure
-        and form strucres such imput fields, button, select, textarea. The input elements have some common attributes
-        as to: place holder, maxlength, and autofocus. The default type of input is </p>
-    but it can be password, checkbox, radio, hidden, files, button or email. we can also specify a defaul value until
-    the user
-    enter another one.
-    <h5>client side validation</h5>
-    <p> we seen how to implement client side validation though it can be bypass easlily.</p>
-    <h4> Object Oriented Programming</h4>
-    <p> We have seen OOP as a style of programming</p>
     <div class="container">
         <div>
-            <h4>Checkout</h4>
+            <h1>Checkout</h1>
         </div>
         <form name="payment" action="processPayment.php" method="post">
             <label for='LastName' class='LastName'>LastName: </label>
@@ -105,23 +75,12 @@
             <button type="submit" name='button' value='click' onclick="processPayment(this.form)"
                 id="submit-button">Submit</button>
         </form>
-        <hr class="onebar">
-        <div>
-            <form name="myform" method="post">
-                Enter something: <BR>
-                <input type="text" name="inputbox" value="">
-                <h2>
-                    <input type="button" name="buttonOne" Value="Read" onClick="readText(this.form)">
-                    <input type="button" name="buttonTwo" Value="Write" onClick="writeText(this.form)">
-            </form>
-        </div>
-        <script>
-            function processPayment(form) {
-                var charge = form.input.value;
-                alert(`payement is completed ${charge}`);
-            }
-            src="/Js/main.js"
-        </script>
 </body>
+<script>
+    function processPayment(form) {
+        var charge = form.input.value;
+        alert(`payement is completed ${charge}`);
+    }
+</script>
 
 </html>
