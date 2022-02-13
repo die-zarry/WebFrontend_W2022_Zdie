@@ -29,3 +29,26 @@ footer {
     background-color: brown;
     padding: 1em;
 }
+
+/* body {
+    max-width: 500px;
+    margin: auto;
+    background-color: bisque;
+} */
+
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 10px;
+}
+
+label {
+    grid-column: 1 / 2;
+}
+
+input,
+button {
+    grid-column: 2 / 3;
+    background-color: chartreuse;
+
+}
