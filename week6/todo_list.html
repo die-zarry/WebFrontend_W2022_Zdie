@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <style>
+        .todo-list {
+            border: 2px solid grenn;
+        }
+
+        .todo-list {
+            border: 1px solid red;
+            color: aqua;
+            background-color: black;
+            text-decoration: none;
+            width: 20%;
+        }
+
+        .task {
+            position: absolute;
+        }
+
+        /* Style the input */
+        input {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 20%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+        }
+
+        .addBtn {
+            border: 1px solid cornsilk;
+            background-color: yellowgreen;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            border: solid 1px;
+        }
+
+        h1 {
+            color: brown;
+            size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 class="app-title">Todos</h1>
+            <div id="todoList" class="todo-list js-todo-list">
+                <span class="task">
+                    <button type="button" id="leftTask">Left</button>
+                    <button type="button" id="allTask">All</button>
+                    <button type="button" id="activeTask">Active</button>
+                    <button type="button" id="CompletedTask">Completed</button>
+                </span>
+            </div>
+            <!-- add the empty state here -->
+            <div class="empty-state">
+                <svg class="checklist-icon">
+                    <use href="#checklist-icon"></use>
+                </svg>
+                <h2 class="empty-state__title">Add your first todo</h2>
+                <p class="empty-state__description">What do you want to get done today?</p>
+            </div>
+            <!-- end -->
+            <form class="todo-form js-form">
+                <input autofocus type="text" aria-label="Enter a new todo item" placeholder="Your to list"
+                    id="todoInput">
+                <!--<button type="button" onclick="todoList()">+</button>-->
+                <button type="button" id="addBtn" class="addBtn">+</button>
+            </form>
+        </div>
+    </main>
+    <script src="./main.js">
+    </script>
+</body>
+
+</html>
