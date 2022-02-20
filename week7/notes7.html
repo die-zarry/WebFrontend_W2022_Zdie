@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note 7</title>
+    <style>
+        x {
+            margin: 0;
+            padding: 0;
+        }
+
+        #todo {
+            width: 20%;
+
+        }
+
+        .btn {
+            background-color: black;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Client and Servers</h1>
+    <p>Internet can be separated into two parts: clients and servers. A client, such
+        as a web browser, will make a request for a web pages from a server, which processes the request and
+        sends back a response to the client.</p>
+    <p>JavaScript was at first a clent side language; which means it operated in the browser and could modify web pages
+        sent to the browser form the the server.However, with Ajax, JavaScript can send request to the sever.These
+        resources requested are usually JSON data, fragments of text or HTML rather than a whole web page. </p>
+    <p> To use Ajax a server is required to respond to those requests or a third party using corss orifin ressourse
+        sharing. CORS</p>
+    <h1> Ajax</h1>
+    <h1> The fetch API</h1>
+    <p> API are software that enable applications to communicate. </p>
+    <p> The fetch API or the request and response data asynchronously across a network.The fetch() method has only one
+        mandatory argument-the URL of the resource you wish to fetch. It returns a promise which will be resolved
+        when a responce is recieved from the url. A catch statement is sometimes used to handle any errors occurs a long
+        the way</p>
+    <h1>The responce Interface</h1>
+    <p> When the promise is fullfiled, an object is returned and the fetch API provide a responce interface to deal with
+        that. Each object responce has an ok property and method to check if the responce was succesfull.An
+        if block can be used to check if the request was successful, and throw an error otherwise.
+        Some other property of the respnce obhect are: Headers, url, redirected and type. The methods are: redirect,
+        The text() method, the blob() and the json() method </p>
+    <h> the Json</h>
+    <p> The json responce is among the most common format for AJAX. It converts a json dato into a javascript object.
+    </p>
+    <p> The different type of request: POST, GET, PUT, PATCH and DELETE</p>
+    <p> The header interface is use for any additional information such as the file type, cookies and authentification,
+        time updated. The headers object has property and methds such has(), get(), set(), append() and </p>
+
+    <button id='number'>Number Fact</button>
+    <button id='chuck'>Chuck Norris Fact</button>
+    <div id='output'>
+        Ajax response will appear here.
+    </div>
+    <form id='todo' action='https://jsonplaceholder.typicode.com/todos' method='POST'>
+        <input type='text' name='task' placeholder='Add Task' autofocus required>
+        <button type='submit' id="btn">Add Task</button>
+    </form>
+    <h1>the FormData</h1>
+    <p>The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using
+        Ajax.</p>
+
+    <h1> Function as object</h1>
+    <p>Fuctions have property and methods. They have lenght and </p>
+    <script src='/week7/main1.js'></script>
+    <script src='/week7/main.js'></script>
+
+
+</body>
+
+</html>
