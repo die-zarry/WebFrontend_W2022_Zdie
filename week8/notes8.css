@@ -1,0 +1,376 @@
+.container {
+    max-width: 960;
+    padding: 0, 30px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-column-gap: 10px;
+    animation-name: content;
+    animation-duration: 4s;
+    transition-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes btn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+#btn {
+    padding: 1rem;
+    border: 1px solid gray;
+    animation-name: btn;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    transition-duration: 1s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+
+}
+
+#btn:hover {
+    background-color: beige;
+    transform: rotate(90deg);
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(90, 90, 100);
+}
+
+/*pentagone*/
+
+#pentagon {
+    position: relative;
+    width: 54px;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: red transparent;
+    animation-name: pentagone;
+    animation-duration: 4s;
+    transition-duration: 1s;
+}
+
+@keyframes pentagone {
+    0% {
+        top: -90px
+    }
+
+    100% {
+        top: 250px
+    }
+}
+
+#pentagon:hover {
+    background-color: blue;
+}
+
+#pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent red;
+
+}
+
+/*fivestart*/
+
+#star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+    animation-duration: 4s;
+    transition-duration: 1s;
+}
+
+#star-five:before {
+    border-bottom: 80px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+
+#star-five:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+
+#star-five:hover {
+    background-color: azure;
+}
+
+
+/*parallelogram*/
+#parallelogram {
+    width: 150px;
+    height: 100px;
+    transform: skew(20deg);
+    background: red;
+    animation-name: para;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+
+#parallelogram:hover {
+    background-color: blue;
+
+}
+
+@keyframes para {
+    0% {
+        top: 50px
+    }
+
+    100% {
+        top: 200px
+    }
+}
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    position: relative;
+    animation-name: myheart;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-direction: alternate;
+
+
+}
+
+@keyframes myheart {
+    0% {
+        background-color: black;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: green;
+        left: 100px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: yellow;
+        left: 100px;
+        top: 100px;
+    }
+
+    75% {
+        background-color: yellow;
+        left: 0px;
+        top: 100px;
+    }
+
+    100% {
+        background-color: purple;
+        letf: 0px;
+        top: 0px;
+    }
+
+}
+
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+/*square*/
+#square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: mysquare;
+    animation-duration: 4s;
+    transition-duration: 1s, 2s;
+    transition-property: background, border-radius, transform;
+    transition-timing-function: ease-in;
+}
+
+#square:hover {
+    border-radius: 50%;
+    transform: rotate(180deg);
+}
+
+#triangle:hover {
+
+    transform: rotate(180deg);
+}
+
+#egg:hover {
+
+    transform: rotate(180deg);
+}
+
+#moon:hover {
+
+    transform: rotate(180deg);
+}
+
+@keyframes mysquare {
+    0% {
+        background-color: black;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: green;
+        left: 100px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: yellow;
+        left: 100px;
+        top: 100px;
+    }
+
+    75% {
+        background-color: yellow;
+        left: 0px;
+        top: 100px;
+    }
+
+    100% {
+        background-color: purple;
+        letf: 0px;
+        top: 0px;
+    }
+}
+
+/*rectangle*/
+#rectangle {
+    width: 200px;
+    height: 100px;
+    background: red;
+    animation-duration: 4s;
+    transition-duration: 1s;
+}
+
+#rectangle:hover {
+    background-color: black;
+}
+
+/*circle*/
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    animation-duration: 4s;
+    transition-duration: 1s;
+    transition-property: transform;
+
+}
+
+#circle:hover {
+    background-color: aquamarine;
+    transform: rotate(180deg);
+}
+
+
+/*oval */
+#oval {
+    width: 200px;
+    height: 100px;
+    background: red;
+    border-radius: 100px / 50px;
+    animation-duration: 4s;
+    transition-duration: 1s;
+    transition-property: transform;
+}
+
+#oval:active {
+    background-color: brown;
+    transition-property: background;
+    transition-duration: 2s;
+    transform: rotate(45deg);
+}
+
+/* triangle*/
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    animation-duration: 4s;
+    transition-duration: 1s;
+}
+
+#egg {
+    display: block;
+    width: 126px;
+    height: 180px;
+    background-color: red;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+#moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 red;
+}
