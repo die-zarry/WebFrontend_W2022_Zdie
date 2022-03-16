@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Include JS files -->
+	<script src="bmi.js"></script>
+	<style>
+		.container {
+			border: solid, 2px, red;
+			border-radius: 1px;
+			width: 300px;
+			max-width: 100%;
+			background-color: yellowgreen;
+			display: grid;
+			grid-gap: 5px;
+		}
+
+		#btn {
+			background-color: green;
+		}
+
+
+		#height,
+		#weight,
+		#age,
+		#gender {
+			background-color: yellow;
+			border: solid 1px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Your BMI</h1>
+
+		<!-- Option for providing height
+			and weight to the user-->
+		<h4 id="age"> Your age</h4>
+		<input type="number" id="number">
+		<span>
+			<h4> your Gender </h4>
+			<input type="radio" id="male" name="male" value="Male">
+			<label for="html">Male</label>
+			<input type="radio" id="female" name="female" value="Female">
+			<label for="css">Female</label>
+		</span>
+		<h4 id="gender">Height (in cm)</h4>
+
+		<input type="text" id="height">
+
+		<h4>Weight (in kg)</h4>
+
+		<input type="text" id="weight">
+		<div class="row"> <button id="btn">Calculate</button></div>
+		<!--<button id="btn">Calculate</button>-->
+
+		<div id="output"></div>
+	</div>
+</body>
+
+</html>
