@@ -41,6 +41,14 @@ const links = [
     label: 'Week 8 Notes',
     url: 'notes8.html',
   },
+  {
+    label: 'Week 9 Notes',
+    url: 'bmi.html',
+  },
+  {
+    label: 'Week 10 Notes',
+    url: 'bmi.html',
+  },
 ];
 
 
