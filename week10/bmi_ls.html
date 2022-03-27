@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>BMI Local Storage</title>
+    <script type="text/javascript" src="localstorage.js"></script>
+    <style>
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        /* .weight,
+        .height,
+        .age,
+        .gender {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        } */
+
+        form {
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr 1fr;
+            grid-gap: 16px;
+        }
+
+        /* .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+
+        } */
+
+        label {
+            grid-column: 1 / 2;
+        }
+
+        input,
+        button {
+            grid-column: 2 / 3;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="bmiForm">
+        <h1>BMI Local Storage</h1>
+
+        <label for="weight" class="weight">Weight</label>
+        <input type="text" id="weight" placeholder="weight" required autofocus>
+
+
+        <label for="height" class="height">Height</label>
+        <input type="text" id="height" placeholder="height" required>
+
+
+        <label for="age" class="age">Age</label>
+        <input type="text" id="age" placeholder="Age" required>
+
+        <!-- <label for="sex">sex</label>
+            <input type="text" id="sex" placeholder="sex" required><br> -->
+
+        <!-- <label class="gender"> your Gender </label> -->
+
+
+        <input type="radio" id="male" name="male" value="Male">
+        <label for="html">Male</label>
+        <input type="radio" id="female" name="female" value="Female">
+        <label for="css">Female</label>
+
+
+        <label for="key">Key</label>
+        <input type="text" id="key" placeholder="Key" required><br> <br>
+
+        <button type="submit">Store records</button>
+    </form>
+
+    <label for="retrieveKey">Enter Key to retrieve item</label>
+    <input type="text" id="retrieveKey" placeholder="retrieveKey" required>
+    <button id="retrieveButton">Retrieve records</button>
+
+    <label for="removeKey">Enter Key to delete item</label>
+    <input type="text" id="removeKey" placeholder="removeKey" required>
+    <button id="removeButton">Remove record</button>
+
+    <button id="clearButton">Clear all records</button>
+
+
+    <div id="retrieve"></div>
+</body>
+
+</html>

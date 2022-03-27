@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myBMI</title>
+</head>
+
+<body>
+    <input type='text' name="bmi" id="bmi" />
+
+    <button onclick="save_Bmi()" type="button"> User BMI </button>
+
+
+    <label for="bmi"> User Info: </label>
+    <input type='text' name="bmi_info" id="bmi_info" />
+    <button onclick="save_bmi()" type="button" value="Save" id="Save" data-theme="a">Info bmi</button>
+    <script>
+        function save_bmi() {
+            var input = document.getElementById("bmi_info");
+            localStorage.setItem("bmi", input.value);
+            var stored_info = localStorage.getItem("bmi");
+            console.log(stored_info);
+        }
+    </script>
+    <!-- 
+    <script src="./localstorage.js">
+        // function save_Bmi() {
+        //     var input = document.getElementById("");
+        //     localStorage.setItem("bmi", input.val());
+        // }
+    </script> -->
+
+
+</body>
+
+</html>
