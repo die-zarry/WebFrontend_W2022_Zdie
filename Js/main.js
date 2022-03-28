@@ -47,7 +47,7 @@ const links = [
   },
   {
     label: 'Week 10 Notes',
-    url: 'bmi.html',
+    url: 'bmi_ls.html',
   },
 ];
 
