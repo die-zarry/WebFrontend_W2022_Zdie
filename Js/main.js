@@ -50,7 +50,7 @@ const links = [
     url: 'bmi_ls.html',
   },
   {
-    label: 'Week9',
+    label: 'Week 9',
     url: 'recipe.html',
   },
   {
