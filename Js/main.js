@@ -46,11 +46,11 @@ const links = [
     url: 'bmi.html',
   },
   {
-    label: 'Week 10 project',
+    label: 'Week 10 ',
     url: 'bmi_ls.html',
   },
   {
-    label: 'Week11 Notes',
+    label: 'Week9',
     url: 'recipe.html',
   },
   {
