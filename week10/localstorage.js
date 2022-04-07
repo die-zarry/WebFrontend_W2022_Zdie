@@ -2,16 +2,16 @@ function store() { //stores items in the localStorage
     var weight = document.getElementById('weight').value;
     var height = document.getElementById('height').value;
     var age = document.getElementById('age').value;
-    var male = document.getElementById('male').value;
-    var female = document.getElementById('female').value;
+    // var male = document.getElementById('male').value;
+    // var female = document.getElementById('female').value;
     var key = document.getElementById('key').value;
 
     const bmi = {
         weight: weight,
         height: height,
-        age: age,
-        male: male,
-        female: female
+        age: age
+        // male: male,
+        // female: female
 
 
     }

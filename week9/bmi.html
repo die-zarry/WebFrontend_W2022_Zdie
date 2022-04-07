@@ -3,60 +3,73 @@
 
 <head>
 	<!-- Include JS files -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>BMI App</title>
+	<link rel="stylesheet" href="../CSS/bmi.css" />
 	<script src="bmi.js"></script>
 	<style>
-		.container {
-			border: solid, 2px, red;
-			border-radius: 1px;
-			width: 300px;
-			max-width: 100%;
-			background-color: yellowgreen;
-			display: grid;
-			grid-gap: 5px;
-		}
-
-		#btn {
-			background-color: green;
-		}
-
-
-		#height,
-		#weight,
-		#age,
-		#gender {
-			background-color: yellow;
-			border: solid 1px;
+		/* Set display to none for image*/
+		#image {
+			display: none;
 		}
 	</style>
+
+	<style>
+	</style>
+	<script>
+		function show() {
+
+			/* Access image by id and change
+			the display property to block*/
+			document.getElementById('image')
+				.style.display = "block";
+		}
+	</script>
 </head>
 
 <body>
+
 	<div class="container">
 		<h1>Your BMI</h1>
 
 		<!-- Option for providing height
-			and weight to the user-->
-		<h4 id="age"> Your age</h4>
-		<input type="number" id="number">
-		<span>
-			<h4> your Gender </h4>
-			<input type="radio" id="male" name="male" value="Male">
-			<label for="html">Male</label>
-			<input type="radio" id="female" name="female" value="Female">
-			<label for="css">Female</label>
-		</span>
-		<h4 id="gender">Height (in cm)</h4>
+				and weight to the user-->
+		<label for="age">Your Age: </label>
+		<input type="number" id="number" required>
 
-		<input type="text" id="height">
+		<label for="height"> Your Height: (in cm) </label>
 
-		<h4>Weight (in kg)</h4>
+		<input type="text" id="height" placeholder="height" required>
 
-		<input type="text" id="weight">
-		<div class="row"> <button id="btn">Calculate</button></div>
-		<!--<button id="btn">Calculate</button>-->
+		<label for="weight"> Your weight: (in kg) </label>
 
-		<div id="output"></div>
+		<input type="text" id="weight" placeholder="weight" required>
+		<div id="output" class="output"></div>
+		<div class="container1">
+			<div class="row"> <button id="btn">Calculate BMI</button></div>
+			<div class="row1"> <button type="button" onclick="show()" id="btnID">
+					Show BMI Category
+				</button></div>
+			<!--<button id="btn">Calculate</button>-->
+			<div class="row2"><a
+					href="file:///C:/Users/zarry/Desktop/WebFrontend_W2022_Zdie/WebFrontend_W2022_Zdie/week10/bmi_ls.html"><img
+						border="2px" alt="bmi image" src="../week10/bmi-image/Screenshot-bmi.png" width="200"
+						height="150" id="img">
+				</a></div>
+			<div class="row3"> <a
+					href="file:////C:Users/zarry/Desktop/WebFrontend_W2022_Zdie/WebFrontend_W2022_Zdie/week9/recipe.html">
+					<img src="../week10/bmi-image/bmi6.jpg" width="300" height="150" id="img"> </a> </div>
+		</div>
 	</div>
+	<!-- <div id="output" class="output"></div> -->
+	<!-- Add id to image -->
+	<img id="image" src="../week10/bmi-image/bmi1.jpg" alt="GFG image" width="400" height="200" />
+
+	</div>
+
+	</div>
+
 </body>
 
 </html>

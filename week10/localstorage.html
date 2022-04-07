@@ -23,17 +23,11 @@
             localStorage.setItem("bmi", input.value);
             var stored_info = localStorage.getItem("bmi");
             console.log(stored_info);
+            const div = document.getElementById("outputlocalstorage") // NEW!
+            div.innerText = JSON.stringify(stored_info); // NEW! 
         }
     </script>
-    <!-- 
-    <script src="./localstorage.js">
-        // function save_Bmi() {
-        //     var input = document.getElementById("");
-        //     localStorage.setItem("bmi", input.val());
-        // }
-    </script> -->
-
-
+    /
 </body>
 
 </html>

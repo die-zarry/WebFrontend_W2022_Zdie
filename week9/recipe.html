@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+
+    <style>
+        .recipe {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 30px;
+
+        }
+
+
+        #btnid:hover {
+            background-color: #4CAF50;
+            /* Green */
+            color: red;
+        }
+
+        #btnid {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: #4CAF50;
+            /* Green */
+            border-radius: 12px;
+            color: yellow;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            background-color: #4CAF50;
+            /* Green */
+            color: yellowgreen;
+            transform-origin: 100% 100%;
+            animation-name: mybmi;
+            animation-duration: 4s;
+            transition-duration: 1s, 2s;
+            transition-property: background, border-radius, transform;
+            transition-timing-function: ease-in;
+        }
+
+        #btnid:hover {
+            border-radius: 50%;
+            transform: rotate(90deg);
+        }
+
+        #btnid_one:hover {
+            border-radius: 50%;
+            transform: rotate(180deg);
+        }
+
+        #btnid_two:hover {
+            border-radius: 50%;
+            transform: rotate(150deg);
+        }
+
+        #btnid_three:hover {
+            border-radius: 50%;
+            transform: rotate(100deg);
+        }
+
+        #btnid_four:hover {
+            border-radius: 50%;
+            transform: rotate(70deg);
+        }
+
+        #btnid_five:hover {
+            border-radius: 50%;
+            transform: rotate(120deg);
+        }
+
+        @keyframes mybmi {
+            0% {
+                background-color: black;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: green;
+                left: 100px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: yellow;
+                left: 100px;
+                top: 100px;
+            }
+
+            75% {
+                background-color: yellow;
+                left: 0px;
+                top: 100px;
+            }
+
+            100% {
+                background-color: red;
+                letf: 0px;
+                top: 0px;
+            }
+        }
+
+        /* #btnid {
+            transition-duration: 0.4s;
+        } */
+
+        #btnid_one {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            animation-name: two;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            position: relative;
+            background-color: #4CAF50;
+            /* Green */
+            border-radius: 12px;
+            color: yellow;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            background-color: #4CAF50;
+        }
+
+        @keyframes two {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: yellowgreen;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        #btnid_two {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            background-color: #4CAF50;
+            /* Green */
+            border-radius: 12px;
+            color: yellow;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            animation-name: two;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            position: relative;
+
+
+        }
+
+        @keyframes two {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: yellowgreen;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        #btnid_three {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            border-radius: 100px / 50px;
+            animation-duration: 4s;
+            transition-duration: 1s;
+            transition-property: transform;
+            background-color: #4CAF50;
+            /* Green */
+            border-radius: 12px;
+            color: yellow;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            animation-name: three;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            position: relative;
+
+
+        }
+
+
+
+        #btnid_three:active {
+            background-color: brown;
+            transition-property: background;
+            transition-duration: 2s;
+            transform: rotate(45deg);
+        }
+
+        @keyframes three {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            40% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            60% {
+                background-color: yellowgreen;
+                top: 200px;
+            }
+
+            85% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        #btnid_four {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            border-radius: 50%;
+            animation-name: four;
+            animation-duration: 4s;
+            transition-duration: 1s;
+            transition-property: transform;
+            /* Green */
+            border-radius: 12px;
+            color: yellow;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            animation-name: two;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            position: relative;
+            background-color: #4CAF50;
+
+        }
+
+        #btnid_four:hover {
+            background-color: yellow;
+            transform: rotate(180deg);
+        }
+
+        @keyframes four {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            10% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: yellowgreen;
+                top: 200px;
+            }
+
+            80% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        #btnid_five {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            animation-duration: 4s;
+            transition-duration: 1s;
+            background-color: #4CAF50;
+            /* Green */
+            border-radius: 12px;
+            color: yellow;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            background-color: #4CAF50;
+        }
+
+
+        #btnid_five:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="recipe">
+        <div id="bmi_info"></div>
+        <div id="bmi_info_one"></div>
+
+        <div id="bmi_info_two"></div>
+        <div id="bmi_info_three"></div>
+        <div id="getBmi_info_four"></div>
+        <div id="getBmi_info_five"></div>
+
+        <div class="zero"><button type="button" onclick="getBmi_info" id="btnid"> Recipe</button> </div>
+        <div class="one"><button type="button" onclick="getBmi_info_one" id="btnid_one"> Food Name</button></div>
+        <div class="two"><button type="button" onclick="getBmi_info_two" id="btnid_two"> Food Calory</button></div>
+        <div class="three"><button type="button" onclick="getBmi_info_three" id="btnid_three"> Food Taste</button>
+        </div>
+        <div class="four"><button type="button" onclick="getBmi_info_four" id="btnid_four"> Food List</button>
+
+        </div>
+        <div class="four"><button type="button" onclick="getBmi_info_five" id="btnid_five"> Food Simmilarities </button>
+        </div>
+    </div>
+    <script src="week9.js">
+        // const bmi_info = document.getElementById(" bmi_info");
+        // const btnid = document.getElementById("btnid");
+        // btnid.addEventListener("click", getBmi_info);
+        // const
+        //     bmi_info_one = document.getElementById("bmi_info_one");
+        // const
+        //     btnid_one = document.getElementById("btnid_one");
+        // btnid_one.addEventListener("click", getBmi_info_one);
+        // const bmi_info_two = document.getElementById("bmi_info_two");
+        // const
+        //     btnid_two = document.getElementById("btnid_two");
+        // btnid_two.addEventListener("click", getBmi_info_two);
+        // const bmi_info_three = document.getElementById("bmi_info_three");
+        // const
+        //     btnid_three = document.getElementById("btnid_three");
+        // btnid_three.addEventListener("click",
+        //     getBmi_info_three);
+        // const bmi_info_four = document.getElementById("bmi_info_four");
+        // const
+        //     btnid_four = document.getElementById("btnid_four");
+        // btnid_four.addEventListener("click",
+        //     getBmi_info_four);
+        // const bmi_info_five = document.getElementById("bmi_info_five");
+        // const
+        //     btnid_five = document.getElementById("btnid_five");
+        // btnid_five.addEventListener("click",
+        //     getBmi_info_five);
+        // const options = {
+        //     method: 'GET',
+        //     headers: {
+        //         'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
+        //         'X-RapidAPI-Key': 'a3af189df7mshc499487c96fcfb1p189f80jsndc2516bb2953'
+        //     }
+        // };
+
+        // function getBmi_info() {
+        //     fetch('https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=chicken%20soup', options)
+        //         .then(response => response.json())
+        //         .then(response => {
+        //             const div = document.getElementById("bmi_info") // NEW!
+        //             div.innerText = JSON.stringify(response)
+
+        //         })
+        //         .catch(err => console.error(err));
+        // }
+
+        // const option_one = {
+        //     method: 'GET',
+        //     headers: {
+        //         'X-RapidAPI-Host': 'food-nutrition-information.p.rapidapi.com',
+        //         'X-RapidAPI-Key': 'a3af189df7mshc499487c96fcfb1p189f80jsndc2516bb2953'
+        //     }
+        // };
+
+        // function getBmi_info_one() {
+        //     fetch('https://food-nutrition-information.p.rapidapi.com/food/1497465', option_one)
+        //         .then(response => response.json())
+
+        //         .then(response => {
+        //             const div = document.getElementById("bmi_info_one") // NEW!
+        //             div.innerText = JSON.stringify(response)
+
+        //         })
+        //         .catch(err => console.error(err));
+        // }
+
+
+        // const option_recipe_auto = {
+        //     method: 'GET',
+        //     headers: {
+        //         'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
+        //         'X-RapidAPI-Key': 'a3af189df7mshc499487c96fcfb1p189f80jsndc2516bb2953'
+        //     }
+        // };
+
+        // function getBmi_info_two() {
+        //     fetch('https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=chicken%20soup', option_recipe_auto)
+        //         .then(response => response.json())
+        //         .then(response => {
+        //             const div = document.getElementById("bmi_info_two") // NEW!
+        //             div.innerText = JSON.stringify(response)
+
+        //         })
+        //         .catch(err => console.error(err));
+        // }
+
+        // function getBmi_info_three() {
+        //     const options = {
+        //         method: 'GET',
+        //         headers: {
+        //             'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
+        //             'X-RapidAPI-Key': 'a3af189df7mshc499487c96fcfb1p189f80jsndc2516bb2953'
+        //         }
+        //     };
+
+        //     fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes', options)
+        //         .then(response => response.json())
+        //         .then(response => {
+        //             const div = document.getElementById("bmi_info_three") // NEW!
+        //             div.innerText = JSON.stringify(response)
+
+        //         })
+        //         .catch(err => console.error(err));
+
+        // }
+
+        // function getBmi_info_four() {
+
+        //     const options = {
+        //         method: 'GET',
+        //         headers: {
+        //             'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
+        //             'X-RapidAPI-Key': 'a3af189df7mshc499487c96fcfb1p189f80jsndc2516bb2953'
+        //         }
+        //     };
+
+        //     fetch('https://tasty.p.rapidapi.com/recipes/get-more-info?id=8138', options)
+        //         .then(response => response.json())
+        //         .then(response => {
+        //             const div = document.getElementById("bmi_info_four") // NEW!
+        //             div.innerText = JSON.stringify(response)
+
+        //         })
+        //         .catch(err => console.error(err));
+        // }
+
+        // function getBmi_info_five() {
+        //     const options = {
+        //         method: 'GET',
+        //         headers: {
+        //             'X-RapidAPI-Host': 'calorieninjas.p.rapidapi.com',
+        //             'X-RapidAPI-Key': 'a3af189df7mshc499487c96fcfb1p189f80jsndc2516bb2953'
+        //         }
+        //     };
+
+        //     fetch('https://calorieninjas.p.rapidapi.com/v1/nutrition?query=tomato', options)
+        //         .then(response => response.json())
+        //         .then(response => {
+        //             const div = document.getElementById("bmi_info_five") // NEW!
+        //             div.innerText = JSON.stringify(response)
+
+        //         })
+        //         .catch(err => console.error(err));
+
+        // }
+    </script>
+</body>
+
+</html>
